@@ -36,16 +36,16 @@ static int misra_5_2_var_hides_var______31x;
 static int misra_5_2_var_hides_var______31y;//5.2
 static int misra_5_2_function_hides_var_31x;
 void misra_5_2_function_hides_var_31y(void) {}//5.2
-void foo(void) 
+void foo(void)
 {
   int i;
   switch(misra_5_2_func1()) //16.4 16.6
   {
-    case 1: 
+    case 1:
     {
       do
       {
-        for(i = 0; i < 10; i++) 
+        for(i = 0; i < 10; i++)
         {
           if(misra_5_2_func3()) //14.4
           {
@@ -54,7 +54,7 @@ void foo(void)
           }
         }
       } while(misra_5_2_func2()); //14.4
-    } 
+    }
   }
 }
 
@@ -112,7 +112,7 @@ void misra_5_3_func1(void)
   {
     case 1:
     {
-      do 
+      do
       {
         int misra_5_3_var_hides_var_1____31x;
         if(misra_5_3_func3()) //14.4
@@ -148,13 +148,13 @@ void misra_5_5_functionhides_macro31y(int misra_5_5_param_hides_macro__31y){} //
 struct misra_5_5_tag_hides_macro____31y { //5.5
 int x;
 };
-void misra_5_5_func1() 
+void misra_5_5_func1()
 {
   switch(misra_5_5_func2()) //16.4 16.6
   {
     case 1:
     {
-      do 
+      do
       {
         if(misra_5_5_func3()) //14.4
         {
@@ -171,11 +171,11 @@ void misra_7_1() {
 }
 
 void misra_7_3() {
-  long misra_7_3_a = 0l; //7.3       
-  long misra_7_3_b = 0lU; //7.3     
-  long long misra_7_3_c = 0Ull; //7.3     
-  long long misra_7_3_d = 0ll; //7.3     
-  long double misra_7_3_e = 7.3l; //7.3  
+  long misra_7_3_a = 0l; //7.3
+  long misra_7_3_b = 0lU; //7.3
+  long long misra_7_3_c = 0Ull; //7.3
+  long long misra_7_3_d = 0ll; //7.3
+  long double misra_7_3_e = 7.3l; //7.3
   }
 
 
@@ -205,7 +205,7 @@ void misra_10_4(u32 x, s32 y) {
   enum misra_10_4_enumb { misra_10_4_B1, misra_10_4_B2, misra_10_4_B3 };
   if ( misra_10_4_B1 > misra_10_4_A1 ) //10.4
    {
-      ; 
+      ;
    }
   z = x + y; //10.4
   z = (a == misra_10_4_A3) ? x : y; //10.4
@@ -258,7 +258,7 @@ void misra_11_7(int *p, float f) {
   y = ( int * ) f; //11.7
 }
 
-void misra_11_7_extra(int *p, float f, bool b) {
+void misra_11_7_extra(int *p, float f) {
   (void) p; // no-warning
   (void) f; // no-warning
 }
